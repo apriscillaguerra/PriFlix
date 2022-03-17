@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AluraFlix 2.0</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header class="cabecalho">
+            <h1 id="titulo-principal">AluraFlix</h1>
+            <div class="links">
+                <a href="https://www.instagram.com/apriscillaguerra/" class="redes" id="instagram"><img
+                        src="https://cdn-icons-png.flaticon.com/512/2111/2111491.png" alt="instagram"></a>
+                <a href="https://github.com/apriscillaguerra" class="redes" id="github"><img
+                        src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="github"></a>
+                <a href="https://codepen.io/apriscillaguerra" class="redes" id="codepen"><img
+                        src="https://cdn-icons-png.flaticon.com/512/2111/2111341.png" alt="codepen"></a>
+                <a href="" class="redes" id="linkedin"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111532.png" alt="linkedin"></a>
+            </div>
+
+        </header>
+        <section class="inserir-conteudo">
+            <div class="inserir-filmes">
+                <input type="text" class="novo-filme" id="titulo-filme" placeholder="Nome do filme">
+                <input type="url" class="novo-filme" id="endereco" placeholder="URL da imagem">
+                <input type="button" class="novo-filme" id="botao-adc" value="Adicionar novo" onclick="adicionar()">
+                <input type="button" class="novo-filme" id="botao-rmv" value="Remover todos" onclick="remover()">
+            </div>
+        </section>
+        <section class="mostrar-conteudo">
+            <div class="lista-filmes">
+                <div class="imagem-filme"></div>
+                <div class="nome-filme"></div>
+            </div>
+        </section>
+        <script src="script.js"></script>
+        <footer>
+            <a href="https://alura.com.br/" target="_blank">
+                <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+            </a>
+        </footer>
+    </body>
+
+</html>
