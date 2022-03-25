@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Quicksand:wght@300;500&family=Staatliches&display=swap');
 
 body {
-    background-color: #30475E;
+    background-color: #304352;
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
     text-align: center;
@@ -10,10 +10,10 @@ body {
 }
 
 .cabecalho {
-    background-image: linear-gradient(to right, #222831, #ECECEC);
+    background-image: linear-gradient(to left, #d7d2cc 0%, #304352 100%);
     text-align: left;
     padding-top: 15px;
-    border-bottom: 30px solid #C1A57B;
+    border-bottom: 30px solid #d7d2cc;
 }
 
 #titulo-principal {
@@ -66,55 +66,63 @@ input::placeholder {
     font-style: italic;
 }
 
-#botao-adc #botao-rmv {
-    font-family: 'Quicksand', sans-serif;
-
-}
 
 #botao-adc {
-    background-color: #C1A57B;
-    color: #ECECEC;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    background-image: linear-gradient(-225deg, #243949 0%, #B8DCFF 48%, #517fa4 100%);
+    color: black;
 }
 
 #botao-adc:hover {
-    background-color: #ECECEC;
-    color: #222831;
+    background-image: linear-gradient(-225deg, #517fa4 0%, #243949 48%, #517fa4 100%);
+    color: #e9e9e9;
     transition: 0.3s;
 }
 
+#botao-rmv {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
 #botao-rmv:hover {
-    background-color: #e00909;
+    background-color: #C84B31;
     color: #ECECEC;
     transition: 0.3s;
 }
 
 .lista-filmes {
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
     width: 960px;
-    background-color: #ececec70;
-}
-
-.mostrar-conteudo {
-    display: flex;
-    justify-content: center;
-}
-
-.lista-filmes {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .imagem-filme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-filme {
+    margin-top: 15px;
     margin-left: 8px;
-    background-color: #c1a57b64;
     width: 232px;
     height: 290px;
+    border-radius: 10px;
 }
 
 .nome-filme {
     margin-left: 8px;
     width: 232px;
     height: 50px;
-    background-color: #222831;
+    color: #e9e9e9;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
 }
 
 footer {

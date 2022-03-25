@@ -1,27 +1,39 @@
 var filmes = []
+var filme = {}
+
+function construirLista(titulo, imagem) {
+    return (filme = {
+        titulo: titulo,
+        imagem: imagem
+    })
+}
 
 function adicionar() {
     debugger
     var imagem = document.querySelector('#endereco').value
     var titulo = document.querySelector('#titulo-filme').value
-    var filme = [imagem, titulo]
 
-    if (filmes.findIndex((filme) => filme[0] == titulo) < 0) {
-        filmes.push(filme)
-        listar(filme)
-    } else if (!imagem.endsWith('.jpg' || '.jpeg' || '.png') || titulo == '') {
+    if (!imagem.endsWith('.jpg' || '.jpeg' || '.png') || titulo == '') {
         alert('Dados incompletos! Titulo pendente ou URL diferente de JPG, JPEG ou PNG.')
+    } else {
+        filmes.push(construirLista(titulo, imagem))
     }
+
     document.querySelector('#endereco').value = ''
     document.querySelector('#titulo-filme').value = ''
 
-    console.log(filme.imagem)
+    console.log(imagem)
+    console.log(titulo)
+
+    listar()
 }
 
 function listar() {
-    var catalogo = document.querySelector('.imagem-filme')
-    catalogo.innerHTML += '<img src=' + filmes[filmes.length - 1][1] + '><p>' + filmes[filmes.length - 1][0] + '</p>'
+    var catalogoFilme = document.querySelector('.imagem-filme')
 
+    for (var i in filmes) {
+        catalogoFilme.innerHTML += '<img class="banner-filme" src="' + filmes[i].imagem + '"><p class="nome-filme">' + filmes[i].titulo + '</p>'
+    }
 
 }
 
