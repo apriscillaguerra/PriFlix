@@ -7,6 +7,7 @@ body {
     text-align: center;
     font-size: 18px;
     margin: 0;
+
 }
 
 .cabecalho {
@@ -44,11 +45,19 @@ body {
     padding: 30px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .inserir-filmes {
     display: flex;
     flex-flow: column wrap;
+    align-self: center;
+    width: 100px;
+}
+
+h1 {
+    color: #e9e9e9;
+    text-shadow: 1px 1px 1px black;
 }
 
 .novo-filme {
@@ -94,17 +103,33 @@ input::placeholder {
 }
 
 .lista-filmes {
-    margin-left: 50px;
-    margin-right: 50px;
-    border-radius: 10px;
-    width: 960px;
+    margin-left: 80px;
+    margin-right: 80px;
     flex-direction: row;
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    overflow: auto;
+}
+
+.filme {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 .imagem-filme {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.imagem-filme:hover {
+    transform: scale(1.1);
 }
 
 .banner-filme {
@@ -126,6 +151,8 @@ input::placeholder {
 }
 
 footer {
-    text-align: center;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
     margin-top: 120px;
 }
